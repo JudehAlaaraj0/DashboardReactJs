@@ -8,5 +8,5 @@ const Footer = () => {
     </div>
   )
 }
-//feet TESTING 2 TESTING 3ALSKJDFKJASLDF;JASKDFJs
+
 export default Footer
