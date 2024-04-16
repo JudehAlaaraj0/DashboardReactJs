@@ -1,0 +1,39 @@
+.dataTable {
+
+    .dataGrid {
+        background-color: white;
+        padding: 20px;
+
+        .MuiDataGrid-toolbarContainer {
+            flex-direction: row-reverse;
+        }
+
+        //HERE IS WHERE I ENCOUNTERED THE ISSUE WITH THE IMAGES,
+        //IN THE VIDEO ITS AUTOMATICALLY CENTERED, I MANUALLY DID IT
+        //MYSTERY SOLVED I THINK, IT WAS CAUSED BY line-height
+        .avatarContainer {
+            display: flex;
+            align-items: center;
+            height: 100%;
+
+            img {
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+
+        .action {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 2px;
+        }
+        //THIS IS WEIRD! ASK ABOUT THIS LATER!
+        .view, .delete {
+            line-height: normal;
+        }
+    }
+}
