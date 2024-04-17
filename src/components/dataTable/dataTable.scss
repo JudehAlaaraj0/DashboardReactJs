@@ -17,6 +17,7 @@
             height: 100%;
 
             img {
+                line-height: normal;
                 width: 32px;
                 height: 32px;
                 border-radius: 50%;
@@ -24,16 +25,22 @@
             }
         }
 
+
+
         .action {
-            height: 100%;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 2px;
+            //justify-content: center;
+            gap: 15px;
+
+            img{
+                width: 20px;
+                height: 20px;
+                cursor: pointer;
+            }
         }
         //THIS IS WEIRD! ASK ABOUT THIS LATER!
-        .view, .delete {
-            line-height: normal;
-        }
+        // .view, .delete {
+        //     line-height: normal;
+        // }
     }
 }
