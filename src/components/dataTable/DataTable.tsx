@@ -11,8 +11,6 @@ type Props = {
 
 const DataTable = (props: Props) => {
 
-
-
     const handleDelete = (id:number) => {
         //deleting the item!
         console.log(id + " has been deleted.");

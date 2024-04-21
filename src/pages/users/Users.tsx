@@ -2,11 +2,13 @@ import { GridColDef } from "@mui/x-data-grid";
 import DataTable from "../../components/dataTable/DataTable";
 import "./Users.scss";
 import { userRows } from "../../data";
+import { useState } from "react";
+import Add from "../../components/add/Add";
 
 const columns: GridColDef[] = [
   { field: 'id', headerName: 'ID', width: 90 },
   {
-    field: "avatar", headerName: "Avatar", width: 100,
+    field: "img", headerName: "Avatar", width: 100,
     renderCell: (params) => {
       return (
         <div className="avatarContainer">
@@ -43,7 +45,8 @@ const columns: GridColDef[] = [
     field: 'createdAt',
     headerName: 'Created At',
     width: 100,
-  },
+    type: "string"
+,  },
   {
     field: 'verified',
     headerName: 'Verified',
@@ -54,13 +57,15 @@ const columns: GridColDef[] = [
 
 
 const Users = () => {
+  const [open, setOpen] = useState(false);
   return (
     <div className="users">
       <div className="info">
         <h1>Users</h1>
-        <button>Add new User</button>
+        <button onClick={()=>setOpen(true)}>Add new User</button>
       </div>
       <DataTable slug="users" columns={columns} rows={userRows}/>
+      {open && <Add slug="user" columns={columns}setOpen={setOpen}/>}
     </div>
   )
 }
