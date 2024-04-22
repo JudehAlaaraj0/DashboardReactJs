@@ -10,3 +10,6 @@ yarn add @mui/material @emotion/react @emotion/styled
 yarn add -D sass
 
 yarn run dev
+
+for test:  
+yarn add @tanstack/react-query
