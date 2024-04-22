@@ -13,3 +13,4 @@ yarn run dev
 
 for test:  
 yarn add @tanstack/react-query
+yarn run (this shows you how you can start the server) nodemon
